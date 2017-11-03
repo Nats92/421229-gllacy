@@ -15,7 +15,7 @@
           <ul class="site-menu">
             <li>
               <a href="catalog.html">Каталог</a>
-              <ul class="drop-down-menu">
+              <ul class="drop-down-menu hidden">
                 <li>
                   <a class="novelties" href="#">Новинки</a>
                 </li>
@@ -40,20 +40,28 @@
               <a href="about_us.html">О Компании</a>
             </li>
           </ul>
+        </nav>
 
+        <button  class="log-in" type="button">Вход</button>
           <label for="search">Найти
-            <input type="text" id="search" name="search" >
+            <input type="search" id="search" name="search" >
           </label>
 
-          <ul class="user-menu">
-            <li>
-              <button  class="log-in" type="button">Вход</button>
-            </li>
-            <li>
-              <button class="shopping-cart" type="button">Пусто</button>
-            </li>
-          </ul>
-        </nav>
+        <button class="log-in" type="button">Вход</button>
+          <form class="log-in-form hidden">
+            <label for="mail">
+              <input type="email" id="mail" name="mail" placeholder="Электронная почта">
+            </label>
+            <label for="password">
+              <input type="password" id="password" name="password" placeholder="Пароль">
+            </label>
+            <input class="button form-button-submit" type="submit" value="Войти">
+
+            <a class="forgot-password" href="#">Забыли пароль?</a>
+            <a class="new-registration" href="#">Новая регистрация</a>
+          </form>
+
+        <button class="shopping-cart" type="button">Пусто</button>
 
         <p class="contacts">
           С 10 до 20, ежедневно
@@ -186,8 +194,8 @@
           самого вкусного, что у нас происходит. Обещаем не спамить и не слать
           всякой ненужной ерунды. Честно =)
         </p>
-        <label for="mail">
-          <input type="text" id="mail" name="mail" placeholder="Электронная почта">
+        <label for="email">
+          <input type="email" id="email" name="email" placeholder="Электронная почта">
         </label>
         <input class="button button-submit" type="submit" value="Отправить">
       </div>
@@ -214,6 +222,23 @@
 
           <button class="button button-form-feedback" type="button">
             Форма обратной связи</button>
+            <form class="feedback-form">
+              <p class="feedback-heading">Мы обязательно вам ответим!</p>
+              <button class="close-form" type="reset">X</button>
+                <label for="name">
+                  <input type="text" id="name" name="name" placeholder="Как вас зовут?">
+                </label>
+                <label for="email">
+                  <input type="email" id="feedback-mail" name="mail"
+                         placeholder="Ваша почта для ответа?">
+                </label>
+                <label for="message">
+                  <textarea id="message" name="message"
+                            placeholder="Напишите что-нибудь..."></textarea>
+                </label>
+              <input class="button button-submit-feedback-form" type="submit"
+                     value="Отправить">
+            </form>
         </div>
     </section>
 
