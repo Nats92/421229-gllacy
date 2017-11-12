@@ -9,8 +9,7 @@
             <h1 class="visually-hidden">GllacyShop - магазин по продаже мороженого
                 собственного производства</h1>
             <nav class="main-menu">
-                <img src="img/logo.svg" width="154" height="64"
-                     alt="Логотип GllacyShop">
+                <img src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop" tabindex="0">
                 <ul class="site-menu">
                     <li><a href="catalog.html">Каталог</a>
                         <ul class="drop-down-menu hidden">
@@ -28,19 +27,15 @@
 
             <div class="user-interface">
                 <a class="button search" href="#">Поиск</a>
-                    <div class="search-form">
-                        <label for="search">Найти</label>
-                        <input type="search" id="search" name="search">
-                    </div>
+                    <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
+                        <label><input type="search" id="search" name="search" placeholder="Что ищем?">Поиск</label>
+                    </form>
                 <a class="button log-in" href="#">Вход</a>
-                    <form class="log-in-form hidden">
-                        <label for="mail"></label>
-                        <input type="email" id="mail" name="mail" placeholder="Электронная почта">
+                    <form class="log-in-form hidden" method="post" action="https://echo.htmlacademy.ru">
+                        <label><input type="email" name="mail" placeholder="Электронная почта"></label>
+                        <label><input type="password" name="password" placeholder="Пароль"></label>
 
-                        <label for="password"></label>
-                        <input type="password" id="password" name="password" placeholder="Пароль">
-
-                        <input class="button form-button-submit" type="submit" value="Войти">
+                        <button class="button form-button-submit" type="submit">Войти</button>
                         <a class="forgot-password" href="#">Забыли пароль?</a>
                         <a class="new-registration" href="#">Новая регистрация</a>
                     </form>
@@ -51,24 +46,22 @@
 
         <main>
             <section class="slider">
+                <h2>Специальные предложения</h2>
                 <ul>
-                    <li>
-                        <img src="img/slide-1.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
+                    <li><img src="img/slide-1.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
                         <p>Крем-брюле и пломбир с малиновым джемом</p>
                         <a class="button button-want-both" href="#">Давайте оба!</a></li>
-                    <li>
-                        <img src="img/slide-2.png" width="1065" height="859" alt="Шоколадный пломбир и лимонный сорбет">
+                    <li><img src="img/slide-2.png" width="1065" height="859" alt="Шоколадный пломбир и лимонный сорбет">
                         <p>Шоколадный пломбир и лимонный сорбет</p>
                         <a class="button button-want-both" href="#">Давайте оба!</a></li>
-                    <li>
-                        <img src="img/slide-3.png" width="1079" height="854" alt="Пломбир с помадкой и клубничный щербет">
+                    <li><img src="img/slide-3.png" width="1079" height="854" alt="Пломбир с помадкой и клубничный щербет">
                         <p>Пломбир с помадкой и клубничный щербет</p>
                         <a class="button button-want-both" href="#">Давайте оба!</a></li>
                 </ul>
                 <div class="slider-controls">
-                    <label><input type="radio" name="slider-switch" value="1"></label>
-                    <label><input type="radio" name="slider-switch" value="2"></label>
-                    <label><input type="radio" name="slider-switch" value="3"></label>
+                    <label><input type="radio" name="slider-switch" value="1">Спецпредложение-1</label>
+                    <label><input type="radio" name="slider-switch" value="2">Спецпредложение-2</label>
+                    <label><input type="radio" name="slider-switch" value="3">Спецпредложение-3</label>
                 </div>
             </section>
             <section class="banners">
@@ -98,7 +91,7 @@
                     </li>
                     <li class="hits-list-item"><span class="icon-hit">ХИТ</span>
                         <img src="img/coffe.jpg" width="267" height="267"
-                           alt="Сливочно-кофейное мороженое с кусочками шоколада">
+                             alt="Сливочно-кофейное мороженое с кусочками шоколада">
                         <p class="price">380₽<span class="measure">/кг</span></p>
                         <a class="hit-name-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
                     </li>
@@ -147,19 +140,19 @@
                     <p class="mailing-form-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего
                         самого вкусного, что у нас происходит. Обещаем не спамить и не слать
                         всякой ненужной ерунды. Честно =)</p>
-                    <form>
-                        <label for="email"></label>
-                        <input type="email" id="email" name="email" placeholder="Электронная почта">
-                        <input class="button button-submit" type="submit" value="Отправить">
+                    <form class="form-subscription" method="post" action="https://echo.htmlacademy.ru">
+                        <label><input type="email" name="email" placeholder="Электронная почта"></label>
+                        <button class="button button-submit" type="submit">Отправить</button>
                     </form>
                 </div>
             </div>
 
             <section class="contacts">
                 <h2 class="visually-hidden">Контакты</h2>
-                <iframe class="contacts-map" src="img/map.png"
-                        width="1200" height="430"></iframe>
-                <img src="img/pin.png" width="218" height="142" alt="Указатель на карте">
+                <!--<iframe class="contacts-map" src="img/map.png"-->
+                        <!--width="1200" height="430"></iframe>-->
+                <img src="img/map.png" width="1200" height="640" alt="Адрес главного офиса и офлайн-магазина:
+                    ул. Большая Конюшенная 19/8, Санкт-Петербург">
                     <div class="contacts-list">
                         <p class="contacts-list-heading">Адрес главного офиса и офлайн-магазина:</p>
                         <p class="contacts-list-address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
@@ -168,13 +161,15 @@
                             <span class="working-hours">(с 10 до 20 ежедневно)</span></p>
 
                         <a class="button button-form-feedback" href="#">Форма обратной связи</a>
-                            <form class="feedback-form">
+                            <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
                                 <p class="feedback-heading">Мы обязательно вам ответим!</p>
-                                    <input class="close-form" type="reset" value="X">
-                                    <input type="text" id="name" name="name" placeholder="Как вас зовут?">
-                                    <input type="email" id="feedback-mail" name="mail" placeholder="Ваша почта для ответа?">
-                                    <textarea id="message" name="message" placeholder="Напишите что-нибудь..."></textarea>
-                                <input class="button button-submit-feedback-form" type="submit" value="Отправить">
+                                    <button class="close-form" type="reset">Закрыть форму обратной связи</button>
+                                    <label><input type="text" name="name" placeholder="Как вас зовут?">Как вас зовут?</label>
+                                    <label><input type="email" name="mail" placeholder="Ваша почта для ответа?">
+                                          Ваша почта для ответа?</label>
+                                    <label><textarea name="message" placeholder="Напишите что-нибудь..."></textarea>
+                                          Напишите что-нибудь</label>
+                                    <button class="button button-submit-feedback-form" type="submit">Отправить</button>
                             </form>
                     </div>
             </section>
@@ -194,8 +189,10 @@
                 <li><a class="eco-standarts" href="#">Экологические стандарты</a></li>
             </ul>
             <div class="copyright">
-                <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип html academy">
-                <p class="copyright-text">Сделано в <a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a> © 2017</p>
+                <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+                    <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип html academy"></a>
+                <p class="copyright-text">Сделано в
+                    <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML Academy</a> © 2017</p>
             </div>
         </footer>
     </body>

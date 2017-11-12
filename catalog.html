@@ -26,36 +26,34 @@
 
             <div class="user-interface">
                 <a class="button search" href="#">Поиск</a>
-                    <div class="search-form">
-                        <label for="search">Найти</label>
-                        <input type="search" id="search" name="search">
-                    </div>
+                    <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
+                        <label><input type="search" id="search" name="search" placeholder="Что ищем?">Поиск</label>
+                    </form>
                 <a class="button log-in" href="#">Вход</a>
-                    <form class="log-in-form hidden">
-                        <label for="mail"></label>
-                        <input type="email" id="mail" name="mail" placeholder="Электронная почта">
-                        <label for="password"></label>
-                        <input type="password" id="password" name="password" placeholder="Пароль">
-                        <input class="button form-button-submit" type="submit" value="Войти">
-                            <a class="forgot-password" href="#">Забыли пароль?</a>
-                            <a class="new-registration" href="#">Новая регистрация</a>
+                    <form class="log-in-form hidden" method="post" action="https://echo.htmlacademy.ru">
+                        <label><input type="email" name="mail" placeholder="Электронная почта"></label>
+                        <label><input type="password" name="password" placeholder="Пароль"></label>
+
+                        <button class="button form-button-submit" type="submit">Войти</button>
+                        <a class="forgot-password" href="#">Забыли пароль?</a>
+                        <a class="new-registration" href="#">Новая регистрация</a>
                     </form>
                 <a class="button shopping-cart filled-cart" href="#">Пусто</a>
-                    <form class="order-form">
+                    <form class="order-form" method="post" action="https://echo.htmlacademy.ru">
                         <table class="order-list">
                             <tr>
-                                <td class="del-row">X</td>
+                                <td class="del-row"><button class="button button-delete">Удалить товар</button></td>
                                 <td class="product-icon"><img src="img/orange.jpg" width="35" height="35"
                                        alt="Пломбир с апельсиновым джемом"></td>
-                                <td class="product-name">Пломбир с апельсиновым джемом</td>
+                                <td class="product-name"><a href="catalog.html">Пломбир с апельсиновым джемом</a></td>
                                 <td class="weight">1,5кг x <span class="price">200 руб.</span></td>
                                 <td class="product-cost">300 руб.</td>
                             </tr>
                             <tr>
-                                <td class="del-row">X</td>
+                                <td class="del-row"><button class="button button-delete">Удалить товар</button></td>
                                 <td class="product-icon"><img src="img/strawberry.jpg" width="35" height="35"
                                        alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-                                <td class="product-name">Клубничный пломбир с присыпкой из белого шоколада</td>
+                                <td class="product-name"><a href="catalog.html">Клубничный пломбир с присыпкой из белого шоколада</a></td>
                                 <td class="weight">1,5кг x <span class="price">300 руб.</span></td>
                                 <td class="product-cost">450 руб.</td>
                             </tr>
@@ -63,7 +61,7 @@
                                 <td colspan="5">Итого: 750 руб.</td>
                             </tr>
                         </table>
-                        <input type="submit" value="Оформить заказ">
+                        <button type="submit">Оформить заказ</button>
                     </form>
                 <p class="contacts"> С 10 до 20, ежедневно <span class="phone">8 812 450-25-25</span></p>
             </div>
@@ -77,33 +75,38 @@
 
         <section class="creamy">
             <h1>Сливочное мороженое</h1>
-            <form class="filters">
-                <p><label for="sort">Сортировка:</label>
+            <form class="filters" method="get" action="https://echo.htmlacademy.ru">
+                <label for="sort">Сортировка:
                     <select id="sort" name="sort">
                         <option value="popular">по популярности</option>
                         <option value="cheap-first">сначала недорогие</option>
                         <option value="expensive-first">сначала дорогие</option>
                         <option value="by-weight">по жирности</option>
                     </select>
-                </p>
-                <p><label for="price">Цена: 100 руб. - 500 руб.</label>
-                    <input id="price" name="price" type="text"></p>
-                <p>Жирность:
+                </label>
+                <div class="price-range">Цена: 100 руб. - 500 руб.
+                    <div class="price-range-line">
+                        <div class="price-range-pin" tabindex="0"></div>
+                        <div class="price-range-val" tabindex="0"></div>
+                    </div>
+                </div>
+                <fieldset>
+                    <legend>Жирность:</legend>
                     <label><input name="fat-content" value="0" type="radio"> 0%</label>
                     <label><input name="fat-content" value="до 10" type="radio" checked> до 10%</label>
                     <label><input name="fat-content" value="до 30" type="radio"> до 30%</label>
                     <label><input name="fat-content" value="30 и более" type="radio"> Выше 30%</label>
-                </p>
-                <p><label for="filters">Наполнители:</label>
-                    <select name="fillers[]" multiple id="filters">
-                        <option selected>шоколадные</option>
-                        <option selected>сахарные присыпки</option>
-                        <option>фрукты</option>
-                        <option>сиропы</option>
-                        <option>джемы</option>
-                    </select>
-                </p>
-                <input class="button-filter-submit" type="submit" value="Применить">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Наполнители:</legend>
+                    <label><input type="checkbox" name="chocolate-fillers" checked>шоколадные</label>
+                    <label><input type="checkbox" name="sugar-powder" checked>сахарные присыпки</label>
+                    <label><input type="checkbox" name="fruits">фрукты</label>
+                    <label><input type="checkbox" name="syrups">сиропы</label>
+                    <label><input type="checkbox" name="jams">джемы</label>
+                </fieldset>
+                <button class="button-filter-submit" type="submit">Применить</button>
             </form>
 
             <main>
@@ -220,8 +223,10 @@
                 <li><a class="eco-standarts" href="#">Экологические стандарты</a></li>
             </ul>
             <div class="copyright">
-                <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип html academy">
-                <p class="copyright-text">Сделано в <a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a> © 2017</p>
+                <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+                    <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип html academy"></a>
+                <p class="copyright-text">Сделано в
+                    <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML Academy</a> © 2017</p>
             </div>
         </footer>
     </body>
