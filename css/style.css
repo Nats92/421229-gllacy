@@ -28,7 +28,8 @@ body {
   color: #fff;
   background-color: #849d8f;
 }
-a {
+a,
+a:visited {
   font-family: "Roboto-medium", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
@@ -38,14 +39,6 @@ a {
 }
 /*.hidden {*/
   /*display: none;*/
-/*}*/
-/*a:hover,*/
-/*a:focus,*/
-/*a:active {*/
-  /*color: #ffbc9e;*/
-  /*text-decoration: none;*/
-  /*border-bottom: 1px solid rgba(255, 188, 158, 0.3);*/
-  /*outline: none;*/
 /*}*/
 .button {
   text-align: center;
@@ -83,7 +76,7 @@ a {
         }
         .site-menu-item a:active {
           color: #000;
-          background-color: #f8f7f4;
+          background-color: rgba(247, 246, 243, 0.99);
           box-shadow: inset 0 2px 1px #696969;
         }
         .site-menu-item a.active {
@@ -130,6 +123,10 @@ a {
       color: #000;
       background-color: #f8f7f4;
     }
+    .shopping-cart.cart-filled {
+      color: #323232;
+      background-color: rgba(255, 255, 255, 0.99);
+    }
 .user-interface p {
   font-size: 14px;
   line-height: 16px;
@@ -145,23 +142,36 @@ a {
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
     .user-interface input {
+      /*font-family: "Roboto-bold", "Arial", sans-serif;*/
+      color: #323232;
+    }
+    .user-interface ::-webkit-input-placeholder,
+    .user-interface :-ms-input-placeholder,
+    .user-interface::placeholder {
       font-family: "Roboto", "Arial", sans-serif;
       font-size: 14px;
       line-height: 24px;
       color: #999999;
       border: 1px solid #d3d3d2;
     }
+        .user-interface input:hover,
+        .mailing-form input:hover,
+        .feedback-form input:hover,
+        .feedback-form textarea:hover {
+          border: 2px solid rgba(154, 154, 154, 0.52);
+        }
     .log-in-form a,
     .log-in-form a:visited {
       font-size: 13px;
       line-height: 24px;
       color: #323232;
-      text-decoration: underline;
+      border-bottom: 1px solid rgba(50, 50, 50, 0.3);
     }
         .log-in-form a:hover,
-        .log-in-form a:focus {
-          border: none;
-          text-decoration: none;
+        .log-in-form a:focus,
+        .log-in-form a:active {
+          color: #e84d37;
+          border-bottom: 1px solid rgba(232, 77, 55, 0.3);
         }
     .log-in-form .button-submit {
       font-family: "Roboto-bold", "Arial", sans-serif;
@@ -190,12 +200,15 @@ a {
           font-size: 13px;
           line-height: 16px;
           color: #323232;
-          border: none;
-          text-decoration: none;
         }
+            .order-list a {
+              border-bottom: none;
+            }
             .order-list a:hover,
-            .order-list a:focus {
-              text-decoration: underline;
+            .order-list a:focus,
+            .order-list a:active {
+              color: #e84d37;
+              border-bottom: 1px solid rgba(232, 77, 55, 0.3);
             }
             .order-list .price {
               color: #999999;
@@ -258,36 +271,42 @@ a {
         .banner-button {
           line-height: 24px;
         }
-.hits-list {
+.products-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-    .hits-list-item:hover {
+    .product:hover {
       background-color: rgba(248, 247, 244, 0.2);
     }
-    .hits-list-item:hover .list-item-button {
+    .product:hover .fast-view-button {
       display: inline-block;
     }
-        .list-item-button {
+        .fast-view-button {
           font-family: "Roboto-bold", "Arial", sans-serif;
           font-size: 18px;
           line-height: 24px;
           color: #fefefe;
         }
-        .hits-list-item .price {
+        .product-price {
           font-family: "Roboto-bold", "Arial", sans-serif;
           font-size: 45px;
           line-height: 45px;
           text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
         }
-            .hits-list-item .measure {
+            .product-price .measure {
               font-size: 30px;
             }
-        .hit-name-link {
+        .product-name-link {
           font-family: "Roboto-medium", "Arial", sans-serif;
           font-size: 16px;
           line-height: 22px;
+        }
+        .product-name-link:hover,
+        .product-name-link:focus,
+        .product-name-link:active {
+          color: #ffbc9e;
+          border-color: rgba(255, 188, 158, 0.3);
         }
 .features {
   color: #000;
@@ -320,13 +339,18 @@ a {
       font-size: 16px;
       line-height: 22px;
     }
-    .blog-link {
+    a.blog-link {
       font-family: "Roboto-bold", "Arial", sans-serif;
       font-size: 24px;
       line-height: 30px;
       color: #323232;
       text-decoration: underline;
     }
+        a.blog-link:hover,
+        a.blog-link:focus,
+        a.blog-link:active {
+          color: #e84d37;
+        }
 .mailing-form-container {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
@@ -344,9 +368,19 @@ a {
           line-height: 24px;
           color: #999999;
         }
-            .mailing-form input {
+            .mailing-form input,
+            .mailing-form textarea {
               font: inherit;
             }
+                .mailing-form ::-webkit-input-placeholder,
+                .mailing-form :-ms-input-placeholder,
+                .mailing-form::placeholder {
+                  font-family: "Roboto", "Arial", sans-serif;
+                  font-size: 14px;
+                  line-height: 24px;
+                  color: #999999;
+                  border: 1px solid #d3d3d2;
+                }
             .mailing-form .button-submit {
               font-family: "Roboto-bold", "Arial", sans-serif;
               font-size: 18px;
@@ -385,6 +419,15 @@ a {
         .feedback-form input {
           font: inherit;
         }
+            .feedback-form ::-webkit-input-placeholder,
+            .feedback-form :-ms-input-placeholder,
+            .feedback-form::placeholder {
+              font-family: "Roboto", "Arial", sans-serif;
+              font-size: 14px;
+              line-height: 24px;
+              color: #999999;
+              border: 1px solid #d3d3d2;
+            }
         .feedback-form .submit-form {
           font-family: "Roboto-bold", "Arial", sans-serif;
           font-size: 18px;
@@ -452,6 +495,15 @@ a {
     a.for-suppliers {
       font-family: "Roboto-bold", "Arial", sans-serif;
     }
+    .info-item a:hover,
+    .info-item a:focus,
+    .info-item a:active,
+    a.for-suppliers:hover,
+    a.for-suppliers:focus,
+    a.for-suppliers:active {
+      color: #ffbc9e;
+      border-color: rgba(255, 188, 158, 0.3);
+    }
 .academy-logo {
   display: block;
   width: 120px;
@@ -464,6 +516,123 @@ a {
   font-size: 12px;
   line-height: 18px;
 }
+    .copyright-text a:hover,
+    .copyright-text a:focus,
+    .copyright-text a:active {
+      color: #ffbc9e;
+      border-bottom: 1px solid rgba(255, 188, 158, 0.3);
+    }
+/* catalog-individual-style */
+
+.catalog-logo {
+  border: none;
+}
+.site-menu .active {
+  background-color: #d07058;
+}
+    .site-menu:active {
+      box-shadow: 0 2px 1px #696969;
+    }
+.breadcrumbs {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+    .breadcrumbs a {
+      font-family: "Roboto", "Arial", sans-serif;
+      font-size: 14px;
+      line-height: 16px;
+      color: #fff;
+    }
+    .breadcrumbs a:hover,
+    .breadcrumbs a:focus,
+    .breadcrumbs a:active {
+      color: #ffbc9e;
+      border-color: rgba(255, 188, 158, 0.3);
+    }
+.creamy h1 {
+  font-family: "Roboto-bold", "Arial", sans-serif;
+  font-size: 35px;
+  line-height: 41px;
+}
+.filters-form {
+  font-family: "Roboto-medium", "Arial", sans-serif;
+  color: #fff;
+}
+    .sort-field-heading {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .filters-form .inner-container,
+    .button-filters-submit {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+        .filters-form fieldset {
+          border: none;
+        }
+        .filters-form input,
+        .filters-form select,
+        .button-filters-submit {
+          font-family: "Roboto-medium", "Arial", sans-serif;
+          font-size: 16px;
+          line-height: 18px;
+          color: #fff;
+        }
+            .fat-content-sort label:hover,
+            .fillers-sort label:hover,
+            .sort:hover {
+              color: #323232;
+            }
+            .sort option {
+              font-size: 14px;
+              line-height: 16px;
+              color: #323232;
+            }
+    .button-filters-submit {
+      border: 2px solid #fff;
+    }
+        .button-filters-submit:hover {
+          color: #323232;
+          background-color: #fff;
+        }
+        .button-filters-submit:active {
+          color: #000;
+          background-color: rgba(247, 246, 243, 0.99);
+          box-shadow: inset 0 2px 1px #696969;
+          border-color: transparent;
+        }
+.pagination {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pagination-item a {
+  display: inline-block;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: none;
+}
+    .pagination-item a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    .pagination-item.current a,
+    .pagination-item:active a {
+      font-family: "Roboto-medium", "Arial", sans-serif;
+      font-size: 16px;
+      line-height: 18px;
+      color: #353535;
+      background-color: #fff;
+      cursor: pointer;
+    }
+    .vertical-centering {
+      vertical-align: middle;
+    }
 
 
 
