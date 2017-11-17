@@ -30,13 +30,17 @@
             <div class="user-interface">
                 <a class="search" href="#">Поиск</a>
                 <form class="search-form hidden" method="get" action="https://echo.htmlacademy.ru">
-                    <label><input class="search-field" type="search" id="search" name="search" placeholder="Что ищем?">Поиск</label>
+                    <label class="visually-hidden" for="search">Поиск</label>
+                    <input class="search-field" type="search" name="search" id="search" placeholder="Что ищем?">
                 </form>
 
                 <a class="log-in" href="#">Вход</a>
                 <form class="log-in-form hidden" method="post" action="https://echo.htmlacademy.ru">
-                    <label><input type="email" name="mail" placeholder="Электронная почта"></label>
-                    <label><input type="password" name="password" placeholder="Пароль"></label>
+                    <label class="visually-hidden" for="log-in-form-mail"></label>
+                    <input type="email" name="mail" id="log-in-form-mail" placeholder="Электронная почта">
+
+                    <label class="visually-hidden" for="log-in-form-pass"></label>
+                    <input type="password" name="password" id="log-in-form-pass" placeholder="Пароль">
 
                     <button class="button button-submit" type="submit">Войти</button>
                     <a href="#">Забыли пароль?</a>
@@ -107,38 +111,38 @@
                     <a class="button banner-button" href="#">Хочу шоколадки!</a>
                 </div>
             </section>
-            <section class="hits">
+            <section class="products">
                 <h2 class="visually-hidden">Популярные товары</h2>
-                <ul class="hits-list">
-                    <li class="hits-list-item"><span class="icon-hit">ХИТ</span>
+                <ul class="products-list">
+                    <li class="product"><span class="icon-hit">ХИТ</span>
                         <img src="img/orange.jpg" width="267" height="267"
                              alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой">
-                        <p class="price">310<span class="measure">р/кг</span></p>
-                        <a class="hit-name-link" href="#">Сливочное с апельсиновым джемом и
+                        <p class="product-price">310<span class="measure">р/кг</span></p>
+                        <a class="product-name-link" href="#">Сливочное с апельсиновым джемом и
                             цитрусовой стружкой</a>
-                        <a class="button list-item-button hidden" href="#">Быстрый просмотр</a>
+                        <a class="button fast-view-button hidden" href="#">Быстрый просмотр</a>
                     </li>
-                    <li class="hits-list-item"><span class="icon-hit">ХИТ</span>
+                    <li class="product"><span class="icon-hit">ХИТ</span>
                         <img src="img/coffe.jpg" width="267" height="267"
                              alt="Сливочно-кофейное мороженое с кусочками шоколада">
-                        <p class="price">380<span class="measure">р/кг</span></p>
-                        <a class="hit-name-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
-                        <a class="button list-item-button hidden" href="#">Быстрый просмотр</a>
+                        <p class="product-price">380<span class="measure">р/кг</span></p>
+                        <a class="product-name-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
+                        <a class="button fast-view-button hidden" href="#">Быстрый просмотр</a>
                     </li>
-                    <li class="hits-list-item"><span class="icon-hit">ХИТ</span>
+                    <li class="product"><span class="icon-hit">ХИТ</span>
                         <img src="img/strawberry.jpg" width="267" height="267"
                              alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада">
-                        <p class="price">355<span class="measure">р/кг</span></p>
-                        <a class="hit-name-link" href="#">Сливочно-клубничное с присыпкой из
+                        <p class="product-price">355<span class="measure">р/кг</span></p>
+                        <a class="product-name-link" href="#">Сливочно-клубничное с присыпкой из
                             белого шоколада</a>
-                        <a class="button list-item-button hidden" href="#">Быстрый просмотр</a>
+                        <a class="button fast-view-button hidden" href="#">Быстрый просмотр</a>
                     </li>
-                    <li class="hits-list-item"><span class="icon-hit">ХИТ</span>
+                    <li class="product"><span class="icon-hit">ХИТ</span>
                         <img src="img/cream.jpg" width="267" height="267"
                              alt="Сливочное мороженое крем-брюле с карамельной подливкой">
-                        <p class="price">415<span class="measure">р/кг</span></p>
-                        <a class="hit-name-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
-                        <a class="button list-item-button hidden" href="#">Быстрый просмотр</a>
+                        <p class="product-price">415<span class="measure">р/кг</span></p>
+                        <a class="product-name-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
+                        <a class="button fast-view-button hidden" href="#">Быстрый просмотр</a>
                     </li>
                 </ul>
             </section>
@@ -174,7 +178,9 @@
                             самого вкусного, что у нас происходит. Обещаем не спамить и не слать
                             всякой ненужной ерунды. Честно =)</p>
                         <form class="mailing-form" method="post" action="https://echo.htmlacademy.ru">
-                            <label><input type="email" name="email" placeholder="Электронная почта"></label>
+                            <label class="visually-hidden" for="mailing-form-mail">Введите адрес электронной почты</label>
+                            <input type="email" id="mailing-form-mail" name="email" placeholder="Электронная почта">
+
                             <button class="button button-submit" type="submit">Отправить</button>
                         </form>
                     </div>
@@ -198,11 +204,15 @@
                         <div class="feedback-form-overlay">
                             <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
                                 <p class="feedback-heading">Мы обязательно вам ответим!</p>
-                                    <label><input type="text" name="name" placeholder="Как вас зовут?">Как вас зовут?</label>
-                                    <label><input type="email" name="mail" placeholder="Ваша почта для ответа?">
-                                          Ваша почта для ответа?</label>
-                                    <label><textarea name="message" placeholder="Напишите что-нибудь..."></textarea>
-                                          Напишите что-нибудь</label>
+                                    <label class="visually-hidden" for="feedback-form-name">Как вас зовут?</label>
+                                    <input type="text" name="name" id="feedback-form-name" placeholder="Как вас зовут?">
+
+                                    <label class="visually-hidden" for="feedback-form-mail">Ваша почта для ответа?</label>
+                                    <input type="email" name="mail" id="feedback-form-mail" placeholder="Ваша почта для ответа?">
+
+                                    <label class="visually-hidden" for="feedback-form-message">Напишите что-нибудь</label>
+                                    <textarea name="message" id="feedback-form-message" placeholder="Напишите что-нибудь..."></textarea>
+
                                     <button class="close-form" type="reset"><span class="visually-hidden">Закрыть форму обратной связи</span></button>
                                     <button class="button submit-form" type="submit">Отправить</button>
                             </form>
