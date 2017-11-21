@@ -11,7 +11,7 @@
             <h1 class="visually-hidden">GllacyShop - магазин по продаже мороженого
                 собственного производства</h1>
             <nav class="main-menu">
-                <img src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop" tabindex="0">
+                <img class="main-page-logo" src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop" tabindex="0">
                 <ul class="site-menu">
                     <li class="site-menu-item"><a href="catalog.html">Каталог</a>
                         <ul class="drop-down-menu hidden">
@@ -51,7 +51,7 @@
                 <form class="order-form hidden" method="post" action="https://echo.htmlacademy.ru">
                     <table class="order-list">
                         <tr>
-                            <td class="del-row"><button class="button-delete"><span class="visually-hidden">Удалить товар</span></button></td>
+                            <td class="del-row"><button class="button-delete" type="button"><span class="visually-hidden">Удалить товар</span></button></td>
                             <td class="product-icon"><img src="img/orange.jpg" width="35" height="35"
                                                           alt="Пломбир с апельсиновым джемом"></td>
                             <td class="product-name"><a href="catalog.html">Пломбир с апельсиновым джемом</a></td>
@@ -59,7 +59,7 @@
                             <td class="product-cost">300 руб.</td>
                         </tr>
                         <tr>
-                            <td class="del-row"><button class="button-delete"><span class="visually-hidden">Удалить товар</span></button></td>
+                            <td class="del-row"><button class="button-delete" type="button"><span class="visually-hidden">Удалить товар</span></button></td>
                             <td class="product-icon"><img src="img/strawberry.jpg" width="35" height="35"
                                                           alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
                             <td class="product-name"><a href="catalog.html">Клубничный пломбир с присыпкой из белого шоколада</a></td>
@@ -115,7 +115,7 @@
                 <h2 class="visually-hidden">Популярные товары</h2>
                 <ul class="products-list">
                     <li class="product"><span class="icon-hit">ХИТ</span>
-                        <img src="img/orange.jpg" width="267" height="267"
+                        <img class="product-photo" src="img/orange.jpg" width="267" height="267"
                              alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой">
                         <p class="product-price">310<span class="measure">р/кг</span></p>
                         <a class="product-name-link" href="#">Сливочное с апельсиновым джемом и
@@ -123,14 +123,14 @@
                         <a class="button fast-view-button hidden" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="product"><span class="icon-hit">ХИТ</span>
-                        <img src="img/coffe.jpg" width="267" height="267"
+                        <img class="product-photo" src="img/coffe.jpg" width="267" height="267"
                              alt="Сливочно-кофейное мороженое с кусочками шоколада">
                         <p class="product-price">380<span class="measure">р/кг</span></p>
                         <a class="product-name-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
                         <a class="button fast-view-button hidden" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="product"><span class="icon-hit">ХИТ</span>
-                        <img src="img/strawberry.jpg" width="267" height="267"
+                        <img class="product-photo" src="img/strawberry.jpg" width="267" height="267"
                              alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада">
                         <p class="product-price">355<span class="measure">р/кг</span></p>
                         <a class="product-name-link" href="#">Сливочно-клубничное с присыпкой из
@@ -138,7 +138,7 @@
                         <a class="button fast-view-button hidden" href="#">Быстрый просмотр</a>
                     </li>
                     <li class="product"><span class="icon-hit">ХИТ</span>
-                        <img src="img/cream.jpg" width="267" height="267"
+                        <img class="product-photo" src="img/cream.jpg" width="267" height="267"
                              alt="Сливочное мороженое крем-брюле с карамельной подливкой">
                         <p class="product-price">415<span class="measure">р/кг</span></p>
                         <a class="product-name-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
@@ -223,7 +223,7 @@
 
         <footer class="main-footer">
             <ul class="social-sites-list">
-              <li><a class="social-sites twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
+                <li><a class="social-sites twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
                 <li><a class="social-sites instagram" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
                 <li><a class="social-sites fb" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
                 <li><a class="social-sites vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
