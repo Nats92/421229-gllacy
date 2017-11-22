@@ -60,6 +60,20 @@ a:visited {
       background-image: linear-gradient(to top, rgba(231, 74, 53, 0.93), rgba(242, 104, 67, 0.93));
       box-shadow: inset 0 2px 2px #ac1000;
     }
+.modal {
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #323232;
+  background-color: #f8f7f4;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+}
+    .modal :focus::-webkit-input-placeholder,
+    .mailing-form :focus::-webkit-input-placeholder {color: transparent;}
+    .modal :focus::-moz-placeholder,
+    .mailing-form :focus::-moz-placeholder {color: transparent;}
+    .modal :focus:-moz-placeholder,
+    .mailing-form :focus:-moz-placeholder {color: transparent;}
+    .modal :focus:-ms-input-placeholder,
+    .mailing-form :focus:-ms-input-placeholder {color: transparent;}
 
 .main-header {
   display: flex;
@@ -159,30 +173,27 @@ a:visited {
               font-size: 22px;
               line-height: 24px;
             }
-        .user-interface form {
-          font-family: "Roboto", "Arial", sans-serif;
-          color: #323232;
-          background-color: #f8f7f4;
-          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
-        }
-            .user-interface input {
-              /*font-family: "Roboto-bold", "Arial", sans-serif;*/
-              color: #323232;
-            }
-            .user-interface ::-webkit-input-placeholder,
-            .user-interface :-ms-input-placeholder,
-            .user-interface::placeholder {
+            .user-interface input::-webkit-input-placeholder {
               font-family: "Roboto", "Arial", sans-serif;
               font-size: 14px;
               line-height: 24px;
               color: #999999;
+            }
+            .user-interface input {
+              font-family: "Roboto-bold", "Arial", sans-serif;
+              color: #323232;
               border: 1px solid #d3d3d2;
             }
                 .user-interface input:hover,
-                .mailing-form input:hover,
-                .feedback-form input:hover,
-                .feedback-form textarea:hover {
-                  border: 2px solid rgba(154, 154, 154, 0.52);
+                .user-interface textarea:hover {
+                  border: 1px solid rgba(154, 154, 154, 0.52);
+                  outline: 1px solid rgba(154, 154, 154, 0.52);
+                }
+                .user-interface textarea:focus,
+                .user-interface input:focus {
+                  border-color: rgba(46, 136, 228, 0.52);
+                  box-shadow: 0 0 0 1px rgba(46, 136, 228, 0.52);
+                  outline: none;
                 }
             .log-in-form a,
             .log-in-form a:visited {
@@ -427,18 +438,25 @@ a:visited {
               line-height: 24px;
               color: #999999;
             }
-                .mailing-form input,
-                .mailing-form textarea {
-                  font: inherit;
+            .mailing-form input::-webkit-input-placeholder {
+               font-family: "Roboto", "Arial", sans-serif;
+               font-size: 14px;
+               line-height: 24px;
+               color: #999999;
+            }
+                .mailing-form input {
+                  font-family: "Roboto-bold", "Arial", sans-serif;
+                  color: #323232;
+                  border: 1px solid rgba(178, 178, 178, 0.52);
                 }
-                    .mailing-form ::-webkit-input-placeholder,
-                    .mailing-form :-ms-input-placeholder,
-                    .mailing-form::placeholder {
-                      font-family: "Roboto", "Arial", sans-serif;
-                      font-size: 14px;
-                      line-height: 24px;
-                      color: #999999;
-                      border: 1px solid #d3d3d2;
+                    .mailing-form input:hover {
+                      border: 1px solid rgba(154, 154, 154, 0.52);
+                      outline: 1px solid rgba(154, 154, 154, 0.52);
+                    }
+                    .mailing-form input:focus {
+                      border-color: rgba(46, 136, 228, 0.52);
+                      box-shadow: 0 0 0 1px rgba(46, 136, 228, 0.52);
+                      outline: none;
                     }
                 .mailing-form .button-submit {
                   font-family: "Roboto-bold", "Arial", sans-serif;
@@ -479,17 +497,27 @@ a:visited {
           color: #999999;
           background-color: #f8f7f4;
         }
-            .feedback-form input {
-              font: inherit;
+            .feedback-form input::-webkit-input-placeholder,
+            .feedback-form textarea::-webkit-input-placeholder {
+              font-family: "Roboto", "Arial", sans-serif;
+              font-size: 16px;
+              line-height: 24px;
+              color: #999999;
             }
-                .feedback-form ::-webkit-input-placeholder,
-                .feedback-form :-ms-input-placeholder,
-                .feedback-form::placeholder {
-                  font-family: "Roboto", "Arial", sans-serif;
-                  font-size: 14px;
-                  line-height: 24px;
-                  color: #999999;
-                  border: 1px solid #d3d3d2;
+            .feedback-form input,
+            .feedback-form textarea {
+              font-family: "Roboto-bold", "Arial", sans-serif;
+              color: #323232;
+              border: 1px solid rgba(178, 178, 178, 0.52);
+            }
+                .feedback-form input:hover {
+                  border: 1px solid rgba(154, 154, 154, 0.52);
+                  outline: 1px solid rgba(154, 154, 154, 0.52);
+                }
+                .feedback-form input:focus {
+                  border-color: rgba(46, 136, 228, 0.52);
+                  box-shadow: 0 0 0 1px rgba(46, 136, 228, 0.52);
+                  outline: none;
                 }
             .feedback-form .submit-form {
               font-family: "Roboto-bold", "Arial", sans-serif;

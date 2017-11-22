@@ -29,49 +29,55 @@
 
             <div class="user-interface">
                 <a class="search" href="#">Поиск</a>
-                <form class="search-form hidden" method="get" action="https://echo.htmlacademy.ru">
-                    <label class="visually-hidden" for="search">Поиск</label>
-                    <input class="search-field" type="search" name="search" id="search" placeholder="Что ищем?">
-                </form>
+                <section class="modal modal-search hidden">
+                    <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
+                        <label class="visually-hidden" for="search">Поиск</label>
+                        <input class="search-field" type="search" name="search" id="search" placeholder="Что ищем?">
+                    </form>
+                </section>
 
                 <a class="log-in" href="#">Вход</a>
-                <form class="log-in-form hidden" method="post" action="https://echo.htmlacademy.ru">
-                    <label class="visually-hidden" for="log-in-form-mail"></label>
-                    <input type="email" name="mail" id="log-in-form-mail" placeholder="Электронная почта">
+                <section class="modal modal-log-in hidden">
+                    <form class="log-in-form" method="post" action="https://echo.htmlacademy.ru">
+                        <label class="visually-hidden" for="log-in-form-mail">Введите адрес электронной почты</label>
+                        <input type="email" name="mail" id="log-in-form-mail" placeholder="Электронная почта">
 
-                    <label class="visually-hidden" for="log-in-form-pass"></label>
-                    <input type="password" name="password" id="log-in-form-pass" placeholder="Пароль">
+                        <label class="visually-hidden" for="log-in-form-pass">Введите пароль</label>
+                        <input type="password" name="password" id="log-in-form-pass" placeholder="Пароль">
 
-                    <button class="button button-submit" type="submit">Войти</button>
-                    <a href="#">Забыли пароль?</a>
-                    <a href="#">Новая регистрация</a>
-                </form>
+                        <button class="button button-submit" type="submit">Войти</button>
+                        <a href="#">Забыли пароль?</a>
+                        <a href="#">Новая регистрация</a>
+                    </form>
+                </section>
 
                 <a class="shopping-cart" href="#">Пусто</a>
-                <form class="order-form hidden" method="post" action="https://echo.htmlacademy.ru">
-                    <table class="order-list">
-                        <tr>
-                            <td class="del-row"><button class="button-delete" type="button"><span class="visually-hidden">Удалить товар</span></button></td>
-                            <td class="product-icon"><img src="img/orange.jpg" width="35" height="35"
-                                                          alt="Пломбир с апельсиновым джемом"></td>
-                            <td class="product-name"><a href="catalog.html">Пломбир с апельсиновым джемом</a></td>
-                            <td class="weight">1,5кг x <span class="price">200 руб.</span></td>
-                            <td class="product-cost">300 руб.</td>
-                        </tr>
-                        <tr>
-                            <td class="del-row"><button class="button-delete" type="button"><span class="visually-hidden">Удалить товар</span></button></td>
-                            <td class="product-icon"><img src="img/strawberry.jpg" width="35" height="35"
-                                                          alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-                            <td class="product-name"><a href="catalog.html">Клубничный пломбир с присыпкой из белого шоколада</a></td>
-                            <td class="weight">1,5кг x <span class="price">300 руб.</span></td>
-                            <td class="product-cost">450 руб.</td>
-                        </tr>
-                        <tr class="total-sum">
-                            <td colspan="5">Итого: 750 руб.</td>
-                        </tr>
-                    </table>
-                  <button class="button button-submit" type="submit">Оформить заказ</button>
-                </form>
+                <section class="modal modal-order hidden">
+                    <form class="order-form" method="post" action="https://echo.htmlacademy.ru">
+                        <table class="order-list">
+                            <tr>
+                                <td class="del-row"><button class="button-delete" type="button"><span class="visually-hidden">Удалить товар</span></button></td>
+                                <td class="product-icon"><img src="img/orange.jpg" width="35" height="35"
+                                                              alt="Пломбир с апельсиновым джемом"></td>
+                                <td class="product-name"><a href="catalog.html">Пломбир с апельсиновым джемом</a></td>
+                                <td class="weight">1,5кг x <span class="price">200 руб.</span></td>
+                                <td class="product-cost">300 руб.</td>
+                            </tr>
+                            <tr>
+                                <td class="del-row"><button class="button-delete" type="button"><span class="visually-hidden">Удалить товар</span></button></td>
+                                <td class="product-icon"><img src="img/strawberry.jpg" width="35" height="35"
+                                                              alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                                <td class="product-name"><a href="catalog.html">Клубничный пломбир с присыпкой из белого шоколада</a></td>
+                                <td class="weight">1,5кг x <span class="price">300 руб.</span></td>
+                                <td class="product-cost">450 руб.</td>
+                            </tr>
+                            <tr class="total-sum">
+                                <td colspan="5">Итого: 750 руб.</td>
+                            </tr>
+                        </table>
+                      <button class="button button-submit" type="submit">Оформить заказ</button>
+                    </form>
+                </section>
                 <p class="contacts"> С 10 до 20, ежедневно <span class="contacts-phone">8 812 450-25-25</span></p>
             </div>
         </header>
@@ -201,21 +207,23 @@
                             <span class="working-hours">(с 10 до 20 ежедневно)</span></p>
 
                         <a class="button show-feedback-form" href="#">Форма обратной связи</a>
-                        <div class="feedback-form-overlay">
-                            <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
-                                <p class="feedback-heading">Мы обязательно вам ответим!</p>
-                                    <label class="visually-hidden" for="feedback-form-name">Как вас зовут?</label>
-                                    <input type="text" name="name" id="feedback-form-name" placeholder="Как вас зовут?">
+                        <div class="feedback-form-overlay hidden">
+                            <section class="modal modal-feedback">
+                                <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
+                                    <p class="feedback-heading">Мы обязательно вам ответим!</p>
+                                        <label class="visually-hidden" for="feedback-form-name">Как вас зовут?</label>
+                                        <input type="text" name="name" id="feedback-form-name" placeholder="Как вас зовут?">
 
-                                    <label class="visually-hidden" for="feedback-form-mail">Ваша почта для ответа?</label>
-                                    <input type="email" name="mail" id="feedback-form-mail" placeholder="Ваша почта для ответа?">
+                                        <label class="visually-hidden" for="feedback-form-mail">Ваша почта для ответа?</label>
+                                        <input type="email" name="mail" id="feedback-form-mail" placeholder="Ваша почта для ответа?">
 
-                                    <label class="visually-hidden" for="feedback-form-message">Напишите что-нибудь</label>
-                                    <textarea name="message" id="feedback-form-message" placeholder="Напишите что-нибудь..."></textarea>
+                                        <label class="visually-hidden" for="feedback-form-message">Напишите что-нибудь</label>
+                                        <textarea name="message" id="feedback-form-message" placeholder="Напишите что-нибудь..."></textarea>
 
-                                    <button class="close-form" type="reset"><span class="visually-hidden">Закрыть форму обратной связи</span></button>
-                                    <button class="button submit-form" type="submit">Отправить</button>
-                            </form>
+                                        <button class="close-form" type="reset"><span class="visually-hidden">Закрыть форму обратной связи</span></button>
+                                        <button class="button submit-form" type="submit">Отправить</button>
+                                </form>
+                            </section>
                         </div>
                     </div>
             </section>
