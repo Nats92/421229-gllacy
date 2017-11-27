@@ -6,13 +6,13 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
+    <body class="main-page">
         <header class="main-header">
             <h1 class="visually-hidden">GllacyShop - магазин по продаже мороженого
                 собственного производства</h1>
             <div class="menu-container">
                 <nav class="main-menu">
-                    <img class="main-page-logo" src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop" tabindex="0">
+                    <img class="gllacy-logo" src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop" tabindex="0">
                     <ul class="site-menu">
                         <li class="site-menu-item"><a href="catalog.html">Каталог</a>
                             <ul class="drop-down-menu">
@@ -31,6 +31,7 @@
                 <div class="user-interface">
                     <a class="search" href="#"><span class="visually-hidden">Поиск</span></a>
                     <section class="modal modal-search hidden">
+                        <h2 class="visually-hidden">Форма поиска по сайту</h2>
                         <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
                             <label class="visually-hidden" for="search">Поиск</label>
                             <input class="search-field" type="search" name="search" id="search" placeholder="Что ищем?">
@@ -39,6 +40,7 @@
 
                     <a class="log-in" href="#">Вход</a>
                     <section class="modal modal-log-in hidden">
+                        <h2 class="visually-hidden">Форма входа на сайт</h2>
                         <form class="log-in-form" method="post" action="https://echo.htmlacademy.ru">
                             <label class="visually-hidden" for="log-in-form-mail">Введите адрес электронной почты</label>
                             <input type="email" name="mail" id="log-in-form-mail" placeholder="Электронная почта">
@@ -54,6 +56,7 @@
 
                     <a class="shopping-cart" href="#">Пусто</a>
                     <section class="modal modal-order hidden">
+                        <h2 class="visually-hidden">Содержимое корзины с товарами</h2>
                         <form class="order-form" method="post" action="https://echo.htmlacademy.ru">
                             <table class="order-list">
                                 <tr>
@@ -229,6 +232,7 @@
                         <a class="button show-feedback-form" href="#">Форма обратной связи</a>
                         <div class="feedback-form-overlay hidden">
                             <section class="modal modal-feedback">
+                                <h2 class="visually-hidden">Форма обратной связи</h2>
                                 <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
                                     <p class="feedback-heading">Мы обязательно вам ответим!</p>
                                         <label class="visually-hidden" for="feedback-form-name">Как вас зовут?</label>
@@ -256,16 +260,12 @@
                 <li><a class="social-sites fb" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
                 <li><a class="social-sites vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
             </ul>
-            <div class="footer-info">
-                <ul class="footer-info-column">
-                    <li class="info-item"><a class="for-suppliers" href="#">Для поставщиков</a></li>
-                    <li class="info-item"><a href="#">О производстве</a></li>
-                </ul>
-                <ul class="footer-info-column">
-                    <li class="info-item"><a href="#">Наши документы</a></li>
-                    <li class="info-item"><a href="#">Экологические стандарты</a></li>
-                </ul>
-            </div>
+            <ul class="footer-info">
+                <li class="info-item"><a class="for-suppliers" href="#">Для поставщиков</a></li>
+                <li class="info-item"><a href="#">О производстве</a></li>
+                <li class="info-item"><a href="#">Наши документы</a></li>
+                <li class="info-item"><a href="#">Экологические стандарты</a></li>
+            </ul>
             <div class="copyright">
                 <a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
                     <img src="img/logo-htmlacademy-small.svg" width="120" height="39" alt="Логотип html academy"></a>
