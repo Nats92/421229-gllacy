@@ -15,7 +15,7 @@
                     <img class="gllacy-logo" src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop" tabindex="0">
                     <ul class="site-menu">
                         <li class="site-menu-item"><a href="catalog.html">Каталог</a>
-                            <ul class="drop-down-menu">
+                            <ul class="drop-down-menu hidden">
                                 <li><a class="novelties" href="#">Новинки</a></li>
                                 <li><a href="#">Сливочное</a></li>
                                 <li><a href="#">Щербеты</a></li>
@@ -29,7 +29,7 @@
                 </nav>
 
                 <div class="user-interface">
-                    <a class="search" href="#"><span class="visually-hidden">Поиск</span></a>
+                    <a class="link-icon search" href="#"><span class="visually-hidden">Поиск</span></a>
                     <section class="modal modal-search hidden">
                         <h2 class="visually-hidden">Форма поиска по сайту</h2>
                         <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
@@ -38,8 +38,8 @@
                         </form>
                     </section>
 
-                    <a class="log-in" href="#">Вход</a>
-                    <section class="modal modal-log-in hidden">
+                    <a class="link-icon log-in" href="#">Вход</a>
+                    <section class="modal modal-log-in">
                         <h2 class="visually-hidden">Форма входа на сайт</h2>
                         <form class="log-in-form" method="post" action="https://echo.htmlacademy.ru">
                             <label class="visually-hidden" for="log-in-form-mail">Введите адрес электронной почты</label>
@@ -49,42 +49,42 @@
                             <input type="password" name="password" id="log-in-form-pass" placeholder="Пароль">
 
                             <button class="button button-submit" type="submit">Войти</button>
-                            <a href="#">Забыли пароль?</a>
-                            <a href="#">Новая регистрация</a>
+                            <div class="log-in-links">
+                                <a href="#">Забыли пароль?</a>
+                                <a href="#">Новая регистрация</a>
+                            </div>
                         </form>
                     </section>
 
-                    <a class="shopping-cart" href="#">Пусто</a>
+                    <a class="link-icon shopping-cart" href="#">Пусто</a>
                     <section class="modal modal-order hidden">
                         <h2 class="visually-hidden">Содержимое корзины с товарами</h2>
                         <form class="order-form" method="post" action="https://echo.htmlacademy.ru">
-                            <table class="order-list">
-                                <tr>
-                                    <td class="del-row"><button class="button-delete" type="button"><span class="visually-hidden">Удалить товар</span></button></td>
-                                    <td class="product-icon"><img src="img/orange.jpg" width="35" height="35"
-                                                                  alt="Пломбир с апельсиновым джемом"></td>
-                                    <td class="product-name"><a href="catalog.html">Пломбир с апельсиновым джемом</a></td>
-                                    <td class="weight">1,5кг x <span class="price">200 руб.</span></td>
-                                    <td class="product-cost">300 руб.</td>
-                                </tr>
-                                <tr>
-                                    <td class="del-row"><button class="button-delete" type="button"><span class="visually-hidden">Удалить товар</span></button></td>
-                                    <td class="product-icon"><img src="img/strawberry.jpg" width="35" height="35"
-                                                                  alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-                                    <td class="product-name"><a href="catalog.html">Клубничный пломбир с присыпкой из белого шоколада</a></td>
-                                    <td class="weight">1,5кг x <span class="price">300 руб.</span></td>
-                                    <td class="product-cost">450 руб.</td>
-                                </tr>
-                                <tr class="total-sum">
-                                    <td colspan="5">Итого: 750 руб.</td>
-                                </tr>
-                            </table>
+                            <ul class="order-list">
+                                <li class="order-list-item">
+                                    <div class="del-list-item"><button class="button-delete" type="button"><span class="visually-hidden">Удалить товар</span></button></div>
+                                    <div class="product-icon"><img src="img/orange.jpg" width="33" height="33"
+                                                                   alt="Пломбир с апельсиновым джемом"></div>
+                                    <div class="product-name"><a href="catalog.html">Пломбир с апельсиновым джемом</a></div>
+                                    <div class="weight">1,5кг x <span class="price">200 руб.</span></div>
+                                    <div class="product-cost">300 руб.</div>
+                                </li>
+                                <li class="order-list-item">
+                                    <div class="del-list-item"><button class="button-delete" type="button"><span class="visually-hidden">Удалить товар</span></button></div>
+                                    <div class="product-icon"><img src="img/strawberry.jpg" width="33" height="33"
+                                                                   alt="Клубничный пломбир с присыпкой из белого шоколада"></div>
+                                    <div class="product-name"><a href="catalog.html">Клубничный пломбир с присыпкой из белого шоколада</a></div>
+                                    <div class="weight">1,5кг x <span class="price">300 руб.</span></div>
+                                    <div class="product-cost">450 руб.</div>
+                                </li>
+                            </ul>
+                          <div class="total-sum">Итого: 750 руб.</div>
                           <button class="button button-submit" type="submit">Оформить заказ</button>
                         </form>
                     </section>
-                    <p class="contacts"> С 10 до 20, ежедневно <br> <span class="contacts-phone">8 812 450-25-25</span></p>
                 </div>
             </div>
+            <p class="contacts"> С 10 до 20, ежедневно <br> <span class="contacts-phone">8 812 450-25-25</span></p>
         </header>
 
         <main>
@@ -133,7 +133,7 @@
                         <div class="img-price-wrap">
                             <img class="product-photo" src="img/orange.jpg" width="267" height="267"
                                  alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой">
-                            <p class="product-price">310<span class="measure">р/кг</span></p>
+                            <p class="product-price">310<span class="measure">/кг</span></p>
                         </div>
                         <a class="product-name-link" href="#">Сливочное с апельсиновым джемом и
                             цитрусовой стружкой</a>
@@ -143,7 +143,7 @@
                         <div class="img-price-wrap">
                             <img class="product-photo" src="img/coffe.jpg" width="267" height="267"
                                  alt="Сливочно-кофейное мороженое с кусочками шоколада">
-                            <p class="product-price">380<span class="measure">р/кг</span></p>
+                            <p class="product-price">380<span class="measure">/кг</span></p>
                         </div>
                         <a class="product-name-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
                         <a class="button fast-view-button hidden" href="#">Быстрый просмотр</a>
@@ -152,7 +152,7 @@
                         <div class="img-price-wrap">
                             <img class="product-photo" src="img/strawberry.jpg" width="267" height="267"
                                  alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада">
-                            <p class="product-price">355<span class="measure">р/кг</span></p>
+                            <p class="product-price">355<span class="measure">/кг</span></p>
                         </div>
                         <a class="product-name-link" href="#">Сливочно-клубничное с присыпкой из
                             белого шоколада</a>
@@ -162,7 +162,7 @@
                         <div class="img-price-wrap">
                             <img class="product-photo" src="img/cream.jpg" width="267" height="267"
                                  alt="Сливочное мороженое крем-брюле с карамельной подливкой">
-                            <p class="product-price">415<span class="measure">р/кг</span></p>
+                            <p class="product-price">415<span class="measure">/кг</span></p>
                         </div>
                         <a class="product-name-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
                         <a class="button fast-view-button hidden" href="#">Быстрый просмотр</a>
