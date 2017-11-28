@@ -211,25 +211,6 @@
                               <span class="working-hours">(с 10 до 20 ежедневно)</span></p>
 
                         <a class="button show-feedback-form" href="#">Форма обратной связи</a>
-                        <div class="feedback-form-overlay hidden">
-                            <section class="modal modal-feedback">
-                                <h2 class="visually-hidden">Форма обратной связи</h2>
-                                <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
-                                    <p class="feedback-heading">Мы обязательно вам ответим!</p>
-                                        <label class="visually-hidden" for="feedback-form-name">Как вас зовут?</label>
-                                        <input type="text" name="name" id="feedback-form-name" placeholder="Как вас зовут?">
-
-                                        <label class="visually-hidden" for="feedback-form-mail">Ваша почта для ответа?</label>
-                                        <input type="email" name="mail" id="feedback-form-mail" placeholder="Ваша почта для ответа?">
-
-                                        <label class="visually-hidden" for="feedback-form-message">Напишите что-нибудь</label>
-                                        <textarea name="message" id="feedback-form-message" placeholder="Напишите что-нибудь..."></textarea>
-
-                                        <button class="button close-form" type="reset"><span class="visually-hidden">Закрыть форму обратной связи</span></button>
-                                        <button class="button submit-form" type="submit">Отправить</button>
-                                </form>
-                            </section>
-                        </div>
                     </div>
             </section>
         </main>
@@ -254,5 +235,24 @@
                     <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML Academy</a> © 2017</p>
             </div>
         </footer>
+        <div class="feedback-form-overlay hidden">
+            <section class="modal modal-feedback">
+                <h2 class="visually-hidden">Форма обратной связи</h2>
+                <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
+                    <p class="feedback-heading">Мы обязательно вам ответим!</p>
+                    <label class="visually-hidden" for="feedback-form-name">Как вас зовут?</label>
+                    <input class="form-field" type="text" name="name" id="feedback-form-name" placeholder="Как вас зовут?">
+
+                    <label class="visually-hidden" for="feedback-form-mail">Ваша почта для ответа?</label>
+                    <input class="form-field" type="email" name="mail" id="feedback-form-mail" placeholder="Ваша почта для ответа?">
+
+                    <label class="visually-hidden" for="feedback-form-message">Напишите что-нибудь</label>
+                    <textarea class="form-field" name="message" id="feedback-form-message" rows="7" placeholder="Напишите что-нибудь..."></textarea>
+
+                    <button class="close-form" type="reset"><span class="visually-hidden">Закрыть форму обратной связи</span></button>
+                    <button class="button submit-form" type="submit">Отправить</button>
+                </form>
+            </section>
+        </div>
     </body>
 </html>

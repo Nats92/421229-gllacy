@@ -313,7 +313,8 @@ a:visited {
   border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
-    .modal input {
+    .modal input,
+    .modal textarea {
       width: 100%;
       padding: 9px 14px;
       box-sizing: border-box;
@@ -1012,15 +1013,45 @@ a:visited {
           padding: 10px 27px;
         }
     .feedback-form-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background-color: rgba(0, 0, 0, 0.3);
+
+      z-index: 5;
+    }
+    .modal-feedback {
+      position: absolute;
+      top: 338px;
+      left: 50%;
+      width: 478px;
+      min-height: 442px;
+      margin-left: -239px;
+      padding: 15px 25px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+
+      z-index: 6;
     }
         .feedback-form {
+          position: relative;
+
           font-family: "Roboto", "Arial", sans-serif;
           font-size: 16px;
           line-height: 24px;
           color: #999999;
+
           background-color: #f8f7f4;
         }
+            .feedback-heading {
+              margin-top: 0;
+            }
             .feedback-form input::-webkit-input-placeholder,
             .feedback-form textarea::-webkit-input-placeholder {
               font-family: "Roboto", "Arial", sans-serif;
@@ -1028,39 +1059,68 @@ a:visited {
               line-height: 24px;
               color: #999999;
             }
+            .feedback-form input {
+              width: 265px;
+            }
+            .feedback-form textarea {
+              height: 152px;
+            }
             .feedback-form input,
             .feedback-form textarea {
               font-family: "Roboto-bold", "Arial", sans-serif;
               color: #323232;
+
+              margin-bottom: 20px;
               border: 1px solid rgba(178, 178, 178, 0.52);
+              -webkit-border-radius: 5px;
+              -moz-border-radius: 5px;
+              border-radius: 5px;
             }
-                .feedback-form input:hover {
+                .feedback-form .form-field:hover {
                   border: 1px solid rgba(154, 154, 154, 0.52);
-                  outline: 1px solid rgba(154, 154, 154, 0.52);
+                  box-shadow: 0 0 0 1px rgba(154, 154, 154, 0.52);
                 }
-                .feedback-form input:focus {
+                .feedback-form .form-field:focus {
                   border-color: rgba(46, 136, 228, 0.52);
                   box-shadow: 0 0 0 1px rgba(46, 136, 228, 0.52);
                   outline: none;
                 }
             .feedback-form .submit-form {
+              position: absolute;
+              right: 0;
+
               font-family: "Roboto-bold", "Arial", sans-serif;
               font-size: 18px;
               line-height: 24px;
+
+              padding: 10px 25px;
             }
             .feedback-form .close-form {
+              position: absolute;
               width: 18px;
-              height: 17px;
+              height: 18px;
+              top: 0;
+              right: 0;
+              padding: 0;
+
+              display: inline-block;
+
               background-color: transparent;
-              background-image: url("../img/close-cross.svg");
-              background-size: contain;
-              background-repeat: no-repeat;
               border: none;
-              box-shadow: none;
+              cursor: pointer;
             }
-                .feedback-form .close-form:hover {
-                  background-color: #fbded7;
+                .feedback-form .close-form::before,
+                .feedback-form .close-form::after {
+                  position: absolute;
+                  top: 8px;
+                  left: -1px;
+                  width: 20px;
+                  height: 2px;
+                  content: "";
+                  background-color: #433f3f;
                 }
+                    .feedback-form .close-form::before { transform: rotate(45deg); }
+                    .feedback-form .close-form::after { transform: rotate(-45deg); }
         .feedback-heading {
           font-family: "Roboto-medium", "Arial", sans-serif;
           font-size: 24px;
@@ -1075,9 +1135,10 @@ a:visited {
     .social-sites-list {
       display: flex;
       margin: 0;
-      padding: 0;
-      list-style: none;
       margin-right: auto;
+      padding: 0;
+
+      list-style: none;
     }
         .social-sites {
           margin-right: 10px;
@@ -1090,6 +1151,7 @@ a:visited {
           border-radius: 50%;
           border: 2px solid rgba(255, 255, 255, 0.5);
           background-repeat: no-repeat;
+
           opacity: 0.8;
         }
             .social-sites:hover,
