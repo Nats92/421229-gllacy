@@ -108,46 +108,49 @@
                     <div class="fields-container price-range-sort">
                         <p class="sort-field-heading">Цена: 100 руб. - 500 руб.</p>
                         <div class="inner-container">
-                            <div class="price-range-line">
-                                <div class="price-range-pin" tabindex="0"></div>
-                                <div class="price-range-val" tabindex="0"></div>
+                            <div class="price-range-wrap">
+                                <div class="price-range-line">
+                                    <div class="price-range-pin" tabindex="0"></div>
+                                    <div class="price-range-value-line"></div>
+                                    <div class="price-range-val" tabindex="0"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="fields-container fat-content-sort">
                         <fieldset><legend class="sort-field-heading">Жирность:</legend>
                             <div class="inner-container">
+                                <input class="visually-hidden" type="radio" name="fat-content" id="fat-content-0" value="0" disabled>
                                 <label for="fat-content-0">0%</label>
-                                <input type="radio" name="fat-content" id="fat-content-0" value="0">
 
+                                <input class="visually-hidden" type="radio" name="fat-content" id="fat-content-10" value="до 10" checked>
                                 <label for="fat-content-10"> до 10%</label>
-                                <input type="radio" name="fat-content" id="fat-content-10" value="до 10" checked>
 
+                                <input class="visually-hidden" type="radio" name="fat-content" id="fat-content-30" value="до 30">
                                 <label for="fat-content-30"> до 30%</label>
-                                <input type="radio" name="fat-content" id="fat-content-30" value="до 30">
 
+                                <input class="visually-hidden" type="radio" name="fat-content" id="fat-content-30-and-more" value="30 и более">
                                 <label for="fat-content-30-and-more"> Выше 30%</label>
-                                <input type="radio" name="fat-content" id="fat-content-30-and-more" value="30 и более">
                             </div>
                         </fieldset>
                     </div>
                     <div class="fields-container fillers-sort">
                         <fieldset><legend class="sort-field-heading">Наполнители:</legend>
                             <div class="inner-container">
+                                <input class="visually-hidden" type="checkbox" name="chocolate-fillers" id="chocolate-fillers" checked>
                                 <label for="chocolate-fillers">шоколадные</label>
-                                <input type="checkbox" name="chocolate-fillers" id="chocolate-fillers" checked>
 
+                                <input class="visually-hidden" type="checkbox" name="sugar-powder" id="sugar-powder" checked>
                                 <label for="sugar-powder">сахарные присыпки</label>
-                                <input type="checkbox" name="sugar-powder" id="sugar-powder" checked>
 
+                                <input class="visually-hidden" type="checkbox" name="fruits" id="fruits">
                                 <label for="fruits">фрукты</label>
-                                <input type="checkbox" name="fruits" id="fruits">
 
+                                <input class="visually-hidden" type="checkbox" name="syrups" id="syrups">
                                 <label for="syrups">сиропы</label>
-                                <input type="checkbox" name="syrups" id="syrups">
 
+                                <input class="visually-hidden" type="checkbox" name="jams" id="jams">
                                 <label for="jams">джемы</label>
-                                <input type="checkbox" name="jams" id="jams">
                             </div>
                         </fieldset>
                     </div>

@@ -60,7 +60,7 @@
                     <section class="modal modal-order hidden">
                         <h2 class="visually-hidden">Содержимое корзины с товарами</h2>
                         <form class="order-form" method="post" action="https://echo.htmlacademy.ru">
-                            <p>Здесь пока пусто :(</p>
+                            <p>Пусто :(</p>
                         </form>
                     </section>
                 </div>
@@ -116,9 +116,9 @@
                                  alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой">
                             <p class="product-price">310<span class="measure">/кг</span></p>
                         </div>
-                        <a class="product-name-link" href="#">Сливочное с апельсиновым джемом и
+                        <a class="product-name-link" href="product-item.html">Сливочное с апельсиновым джемом и
                             цитрусовой стружкой</a>
-                        <a class="button fast-view-button hidden" href="#">Быстрый просмотр</a>
+                        <a class="button fast-view-button hidden" href="product-item.html">Быстрый просмотр</a>
                     </li>
                     <li class="product">
                         <div class="img-price-wrap">
@@ -126,8 +126,8 @@
                                  alt="Сливочно-кофейное мороженое с кусочками шоколада">
                             <p class="product-price">380<span class="measure">/кг</span></p>
                         </div>
-                        <a class="product-name-link" href="#">Сливочно-кофейное с кусочками шоколада</a>
-                        <a class="button fast-view-button hidden" href="#">Быстрый просмотр</a>
+                        <a class="product-name-link" href="product-item.html">Сливочно-кофейное с кусочками шоколада</a>
+                        <a class="button fast-view-button hidden" href="product-item.html">Быстрый просмотр</a>
                     </li>
                     <li class="product">
                         <div class="img-price-wrap">
@@ -135,9 +135,9 @@
                                  alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада">
                             <p class="product-price">355<span class="measure">/кг</span></p>
                         </div>
-                        <a class="product-name-link" href="#">Сливочно-клубничное с присыпкой из
+                        <a class="product-name-link" href="product-item.html">Сливочно-клубничное с присыпкой из
                             белого шоколада</a>
-                        <a class="button fast-view-button hidden" href="#">Быстрый просмотр</a>
+                        <a class="button fast-view-button hidden" href="product-item.html">Быстрый просмотр</a>
                     </li>
                     <li class="product">
                         <div class="img-price-wrap">
@@ -145,8 +145,8 @@
                                  alt="Сливочное мороженое крем-брюле с карамельной подливкой">
                             <p class="product-price">415<span class="measure">/кг</span></p>
                         </div>
-                        <a class="product-name-link" href="#">Сливочное крем-брюле с карамельной подливкой</a>
-                        <a class="button fast-view-button hidden" href="#">Быстрый просмотр</a>
+                        <a class="product-name-link" href="product-item.html">Сливочное крем-брюле с карамельной подливкой</a>
+                        <a class="button fast-view-button hidden" href="product-item.html">Быстрый просмотр</a>
                     </li>
                 </ul>
             </section>
@@ -195,14 +195,11 @@
                 </div>
             </div>
 
-            <section class="contacts">
+            <div class="map-and-contacts">
                 <h2 class="visually-hidden">Контакты</h2>
-                <!--<iframe class="contacts-map" src="img/map.png"-->
-                        <!--width="1200" height="430"></iframe>-->
                 <div class="map-container">
                     <img src="img/map-sliced.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн-магазина:
                         ул. Большая Конюшенная 19/8, Санкт-Петербург">
-                </div>
                     <div class="contacts-list">
                         <p class="contacts-list-heading">Адрес главного офиса и офлайн-магазина:</p>
                         <p class="contacts-list-address">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
@@ -212,9 +209,28 @@
 
                         <a class="button show-feedback-form" href="#">Форма обратной связи</a>
                     </div>
-            </section>
-        </main>
+                </div>
+                <div class="feedback-form-overlay hidden">
+                    <section class="modal modal-feedback">
+                        <h2 class="visually-hidden">Форма обратной связи</h2>
+                        <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
+                            <p class="feedback-heading">Мы обязательно вам ответим!</p>
+                            <label class="visually-hidden" for="feedback-form-name">Как вас зовут?</label>
+                            <input class="form-field" type="text" name="name" id="feedback-form-name" placeholder="Как вас зовут?">
 
+                            <label class="visually-hidden" for="feedback-form-mail">Ваша почта для ответа?</label>
+                            <input class="form-field" type="email" name="mail" id="feedback-form-mail" placeholder="Ваша почта для ответа?">
+
+                            <label class="visually-hidden" for="feedback-form-message">Напишите что-нибудь</label>
+                            <textarea class="form-field" name="message" id="feedback-form-message" rows="7" placeholder="Напишите что-нибудь..."></textarea>
+
+                            <button class="close-form" type="reset"><span class="visually-hidden">Закрыть форму обратной связи</span></button>
+                            <button class="button submit-form" type="submit">Отправить</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </main>
         <footer class="main-footer">
             <ul class="social-sites-list">
                 <li><a class="social-sites twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
@@ -235,24 +251,5 @@
                     <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML Academy</a> © 2017</p>
             </div>
         </footer>
-        <div class="feedback-form-overlay hidden">
-            <section class="modal modal-feedback">
-                <h2 class="visually-hidden">Форма обратной связи</h2>
-                <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
-                    <p class="feedback-heading">Мы обязательно вам ответим!</p>
-                    <label class="visually-hidden" for="feedback-form-name">Как вас зовут?</label>
-                    <input class="form-field" type="text" name="name" id="feedback-form-name" placeholder="Как вас зовут?">
-
-                    <label class="visually-hidden" for="feedback-form-mail">Ваша почта для ответа?</label>
-                    <input class="form-field" type="email" name="mail" id="feedback-form-mail" placeholder="Ваша почта для ответа?">
-
-                    <label class="visually-hidden" for="feedback-form-message">Напишите что-нибудь</label>
-                    <textarea class="form-field" name="message" id="feedback-form-message" rows="7" placeholder="Напишите что-нибудь..."></textarea>
-
-                    <button class="close-form" type="reset"><span class="visually-hidden">Закрыть форму обратной связи</span></button>
-                    <button class="button submit-form" type="submit">Отправить</button>
-                </form>
-            </section>
-        </div>
     </body>
 </html>
