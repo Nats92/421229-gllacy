@@ -1,15 +1,15 @@
 "use strict";
 
 var userInterface = document.querySelector(".user-interface");
-var modal = userInterface.querySelectorAll(".modal");
-var modals = Array.from(modal);
-var linkIcon = userInterface.querySelectorAll(".link-icon-container");
-var linkIcons = Array.from(linkIcon);
+var modalCollection = userInterface.querySelectorAll(".modal");
+var modals = Array.from(modalCollection);
+var linkIconCollection = userInterface.querySelectorAll(".link-icon-container");
+var linkIcons = Array.from(linkIconCollection);
+var indicator = document.querySelector(".hover-indicator");
 
 /* выпадашки юзер-интерфейса */
 linkIcons.forEach(function(it) {
   it.addEventListener("mouseenter", function(evt) {
-    // debugger
     var currentModal = evt.target.nextElementSibling;
 
     modals.forEach(function(it) {
@@ -17,27 +17,81 @@ linkIcons.forEach(function(it) {
     });
 
     currentModal.classList.remove("hidden");
+    indicator.classList.add("leave-indicate");
 
-    // currentModal.addEventListener("mouseleave", function() {
-    //   currentModal.classList.add("hidden");
-    // });
-    document.querySelector("body").addEventListener("mouseenter", function() {
+    indicator.addEventListener("mouseover", function indicate() {
       currentModal.classList.add("hidden");
-    })
+      indicator.classList.remove("leave-indicate");
+      indicator.removeEventListener("mouseover", indicate);
+    });
   })
 });
 
 /* выпадающее меню */
 
-var siteMenuItem = document.querySelector(".site-menu-item");
+var siteMenuItemCollection = document.querySelectorAll(".site-menu-item");
+var siteMenuItems = Array.from(siteMenuItemCollection);
 
-siteMenuItem.addEventListener("mouseover", function(evt) {
-  var dropDown = evt.target.nextElementSibling;
-  dropDown.classList.remove("hidden");
-  dropDown.addEventListener("mouseleave", function() {
-    dropDown.classList.add("hidden");
-  })
+siteMenuItems.forEach(function(it) {
+    it.addEventListener("mouseenter", function() {
+      var dropDownMenu = it.querySelector(".drop-down-menu-wrap");
+
+      if (dropDownMenu) {
+        dropDownMenu.classList.remove("hidden");
+        it.addEventListener("mouseleave", function hoverLeft() {
+          dropDownMenu.classList.add("hidden");
+          it.removeEventListener("mouseleave", hoverLeft);
+        });
+      }
+    })
 });
+
+/* слайдер */
+
+var body = document.querySelector("body");
+var sliderSection = document.querySelector(".slider");
+var slideCollection = sliderSection.querySelectorAll(".slider-item");
+var slides = Array.from(slideCollection);
+
+var sliderControlsCollection = sliderSection.querySelectorAll("button");
+var sliderControls = Array.from(sliderControlsCollection);
+
+sliderControls[0].addEventListener("click", function() {
+  sliderControls.forEach(function(it) {
+    it.classList.remove("active");
+  });
+  sliderControls[0].classList.add("active");
+  body.style.backgroundColor = "#849d8f";
+  slides.forEach(function(it) {
+    it.classList.add("hidden");
+  });
+  slides[0].classList.remove("hidden");
+});
+
+sliderControls[1].addEventListener("click", function() {
+  sliderControls.forEach(function(it) {
+    it.classList.remove("active");
+  });
+  sliderControls[1].classList.add("active");
+  body.style.backgroundColor = "#8996a6";
+  slides.forEach(function(it) {
+    it.classList.add("hidden");
+  });
+  slides[1].classList.remove("hidden");
+});
+
+sliderControls[2].addEventListener("click", function() {
+  sliderControls.forEach(function(it) {
+    it.classList.remove("active");
+  });
+  sliderControls[2].classList.add("active");
+  body.style.backgroundColor = "#9d8b84";
+  slides.forEach(function(it) {
+    it.classList.add("hidden");
+  });
+  slides[2].classList.remove("hidden");
+});
+
 
 
 
