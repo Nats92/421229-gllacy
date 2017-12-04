@@ -157,7 +157,11 @@ img {
             }
                 .site-menu-item {
                   position: relative;
+<<<<<<< HEAD
                   margin-bottom: 2px;
+=======
+                  margin-bottom: 14px;
+>>>>>>> 9ec782cdbe288f8b98d50b691673ca35e2788598
                 }
                     .site-menu-item > a,
                     .site-menu-item > a:visited {
@@ -217,8 +221,12 @@ img {
                           font-family: "Roboto-bold", "Arial", sans-serif;
 
                           margin: 2px 0;
+<<<<<<< HEAD
                           border-top-left-radius: 5px;
                           border-top-right-radius: 5px;
+=======
+                          border-radius: 5px;
+>>>>>>> 9ec782cdbe288f8b98d50b691673ca35e2788598
                         }
                             .drop-down-menu .novelties::after {
                               content: "";
@@ -276,10 +284,13 @@ img {
 
           max-width: 293px;
         }
+<<<<<<< HEAD
         .link-icon-container {
           padding-right: 10px;
           padding-bottom: 15px;
         }
+=======
+>>>>>>> 9ec782cdbe288f8b98d50b691673ca35e2788598
             .user-interface .link-icon,
             .user-interface .link-icon:visited {
               position: relative;
@@ -290,16 +301,28 @@ img {
               line-height: 16px;
               color: #fff;
 
+<<<<<<< HEAD
               /*margin-right: 10px;*/
               padding: 7px 15px;
               padding-left: 43px;
               /*margin-bottom: 4px;*/
+=======
+              margin-right: 10px;
+              padding: 8px 15px;
+              padding-left: 43px;
+              margin-bottom: 10px;
+>>>>>>> 9ec782cdbe288f8b98d50b691673ca35e2788598
               border-radius: 15px;
               background-color: rgba(255, 255, 255, 0.2);
               outline: none;
             }
+<<<<<<< HEAD
                 .user-interface .link-icon-container:last-of-type {
                   padding-right: 0;
+=======
+                .user-interface .link-icon:last-of-type {
+                  margin-right: 0;
+>>>>>>> 9ec782cdbe288f8b98d50b691673ca35e2788598
                 }
                 .user-interface .link-icon:hover,
                 .user-interface .link-icon:focus {
@@ -451,6 +474,7 @@ img {
   padding: 20px 18px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+<<<<<<< HEAD
 
   z-index:3;
 }
@@ -465,6 +489,22 @@ img {
       display: inline-block;
       max-width: 120px;
 
+=======
+
+  z-index:3;
+}
+    .modal-log-in input {
+      margin-bottom: 20px;
+    }
+    .modal-log-in .button-submit {
+      padding: 10px 25px;
+      margin-right: 15px;
+    }
+    .log-in-links {
+      display: inline-block;
+      max-width: 120px;
+
+>>>>>>> 9ec782cdbe288f8b98d50b691673ca35e2788598
       vertical-align: middle;
     }
         .log-in-links a,
@@ -614,6 +654,7 @@ img {
       font-family: "Roboto-bold", "Arial", sans-serif;
       font-size: 18px;
       line-height: 24px;
+<<<<<<< HEAD
 
       padding: 10px 15px;
     }
@@ -625,6 +666,19 @@ img {
   margin: 0;
   right: 27px;
 
+=======
+
+      padding: 10px 15px;
+    }
+/* Блок с телефоном в хедере */
+.main-header .contacts {
+  position: absolute;
+  bottom: -48px;
+  text-align: right;
+  margin: 0;
+  right: 27px;
+
+>>>>>>> 9ec782cdbe288f8b98d50b691673ca35e2788598
   font-size: 14px;
   line-height: 16px;
 }
@@ -762,6 +816,7 @@ img {
 
                   margin: 0;
                   margin-bottom: 16px;
+<<<<<<< HEAD
                 }
                 .banner p {
                   display: block;
@@ -776,6 +831,22 @@ img {
 
                   padding: 10px 25px;
                 }
+=======
+                }
+                .banner p {
+                  display: block;
+                  width: 520px;
+                  margin: 0 auto;
+                  margin-bottom: 45px;
+                }
+                .banner-button {
+                  -ms-flex-item-align: end;
+                  align-self: flex-end;
+                  line-height: 24px;
+
+                  padding: 10px 25px;
+                }
+>>>>>>> 9ec782cdbe288f8b98d50b691673ca35e2788598
 /* Блок с хитами продаж ------------------ */
 .products {
   padding: 0 14px;
