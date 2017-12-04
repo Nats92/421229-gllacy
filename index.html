@@ -14,10 +14,10 @@
                 <nav class="main-menu">
                     <img class="gllacy-logo" src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop" tabindex="0">
                     <ul class="site-menu">
-                        <li class="site-menu-item"><a href="catalog.html">Каталог</a>
+                        <li class="site-menu-item"><a href="#">Каталог</a>
                             <ul class="drop-down-menu hidden">
                                 <li><a class="novelties" href="#">Новинки</a></li>
-                                <li><a href="#">Сливочное</a></li>
+                                <li><a href="catalog.html">Сливочное</a></li>
                                 <li><a href="#">Щербеты</a></li>
                                 <li><a href="#">Фруктовый лед</a></li>
                                 <li><a href="#">Мелорин</a></li>
@@ -29,7 +29,9 @@
                 </nav>
 
                 <div class="user-interface">
-                    <a class="link-icon search" href="#"><span class="visually-hidden">Поиск</span></a>
+                    <div class="link-icon-container">
+                      <a class="link-icon search" href="#"><span class="visually-hidden">Поиск</span></a>
+                    </div>
                     <section class="modal modal-search hidden">
                         <h2 class="visually-hidden">Форма поиска по сайту</h2>
                         <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
@@ -38,7 +40,9 @@
                         </form>
                     </section>
 
-                    <a class="link-icon log-in" href="#">Вход</a>
+                    <div class="link-icon-container">
+                        <a class="link-icon log-in" href="#">Вход</a>
+                    </div>
                     <section class="modal modal-log-in hidden">
                         <h2 class="visually-hidden">Форма входа на сайт</h2>
                         <form class="log-in-form" method="post" action="https://echo.htmlacademy.ru">
@@ -56,11 +60,13 @@
                         </form>
                     </section>
 
-                    <a class="link-icon shopping-cart" href="#">Пусто</a>
+                    <div class="link-icon-container">
+                        <a class="link-icon shopping-cart" href="#">Пусто</a>
+                    </div>
                     <section class="modal modal-order hidden">
                         <h2 class="visually-hidden">Содержимое корзины с товарами</h2>
                         <form class="order-form" method="post" action="https://echo.htmlacademy.ru">
-                            <p>Пусто :(</p>
+                            <p>Корзина пуста</p>
                         </form>
                     </section>
                 </div>
@@ -251,5 +257,6 @@
                     <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML Academy</a> © 2017</p>
             </div>
         </footer>
+        <script src="js/script.js"></script>
     </body>
 </html>
