@@ -92,6 +92,24 @@ sliderControls[2].addEventListener("click", function() {
   slides[2].classList.remove("hidden");
 });
 
+/* Модалка обратная связь */
+
+var showFeedbackForm = document.querySelector(".show-feedback-form");
+var feedbackFormOverlay = document.querySelector(".feedback-form-overlay");
+var closeFeedback = document.querySelector(".close-form");
+
+showFeedbackForm.addEventListener("click", function(evt) {
+  debugger
+  evt.preventDefault();
+  feedbackFormOverlay.classList.remove("hidden");
+
+  closeFeedback.addEventListener("click", function closeForm(evt) {
+    evt.preventDefault();
+    feedbackFormOverlay.classList.add("hidden");
+    closeFeedback.removeEventListener("click", closeForm);
+  })
+});
+
 
 
 
