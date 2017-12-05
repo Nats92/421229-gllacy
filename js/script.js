@@ -99,7 +99,6 @@ var feedbackFormOverlay = document.querySelector(".feedback-form-overlay");
 var closeFeedback = document.querySelector(".close-form");
 
 showFeedbackForm.addEventListener("click", function(evt) {
-  debugger
   evt.preventDefault();
   feedbackFormOverlay.classList.remove("hidden");
 
