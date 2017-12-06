@@ -328,6 +328,7 @@ img {
                   width: 32px;
                   height: 32px;
                   padding: 0;
+                  margin-bottom: 5px;
                   border-radius: 50%;
                   background-image: url("../img/loop.svg");
                   background-position: center center;
@@ -756,8 +757,9 @@ img {
       margin-bottom: 40px;
     }
         .left-banner {
-         background-color: #5e0f1f;
-         background-image: url("../img/paspberry.png");
+          margin-right: auto;
+          background-color: #5e0f1f;
+          background-image: url("../img/paspberry.png");
         }
         .right-banner {
           background-color: #462b1f;
