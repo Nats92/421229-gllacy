@@ -1100,6 +1100,11 @@ img {
   text-align: center;
   margin-bottom: 20px;
 }
+.map-widget {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
     .map-container {
       position: relative;
       width: 1200px;
@@ -1137,6 +1142,7 @@ img {
           border-radius: 10px;
           margin-right: 27px;
           background-color: #fff;
+          z-index: 2;
         }
             .contacts-list-address,
             .contacts-list-phone,
