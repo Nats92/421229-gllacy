@@ -166,11 +166,16 @@ if ( ie > 0 ) {
 
 var showFeedbackForm = document.querySelector(".show-feedback-form");
 var feedbackFormOverlay = document.querySelector(".feedback-form-overlay");
+var feedbackForm = document.querySelector(".feedback-form");
 var closeFeedback = document.querySelector(".close-form");
 
 showFeedbackForm.addEventListener("click", function(evt) {
+  debugger;
   evt.preventDefault();
   feedbackFormOverlay.classList.remove("hidden");
+  feedbackForm.classList.add("animation-grow");
+  feedbackFormOverlay.classList.add("animation-appear");
+
 
   closeFeedback.addEventListener("click", function closeForm(evt) {
     evt.preventDefault();
