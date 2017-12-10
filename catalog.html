@@ -3,8 +3,8 @@
     <head>
           <meta charset="utf-8">
           <title>HTML Academy: Глейси</title>
-          <link rel="stylesheet" href="css/normalize.css">
-          <link rel="stylesheet" href="css/style.css">
+          <link rel="stylesheet" href="css/normalize-min.css">
+          <link rel="stylesheet" href="css/style-mini.css">
     </head>
     <body class="catalog-page">
         <header class="main-header">
@@ -31,7 +31,7 @@
 
                 <div class="user-interface">
                     <div class="link-icon-container search">
-                        <a class="link-icon search" href="#"><span class="visually-hidden">Поиск</span></a>
+                        <a class="link-icon search" href="search.html"><span class="visually-hidden">Поиск</span></a>
                     </div>
                     <section class="modal modal-search hidden">
                         <h2 class="visually-hidden">Форма поиска по сайту</h2>
@@ -42,7 +42,7 @@
                     </section>
 
                     <div class="link-icon-container login">
-                        <a class="link-icon log-in" href="#">Вход</a>
+                        <a class="link-icon log-in" href="log-in.html">Вход</a>
                     </div>
                     <section class="modal modal-log-in hidden">
                         <h2 class="visually-hidden">Форма входа на сайт</h2>
@@ -63,7 +63,7 @@
 
 
                     <div class="link-icon-container cart">
-                        <a class="link-icon shopping-cart cart-filled" href="#">2 товара</a>
+                        <a class="link-icon shopping-cart cart-filled" href="cart.html">2 товара</a>
                     </div>
                     <section class="modal modal-order hidden">
                         <h2 class="visually-hidden">Содержимое корзины с товарами</h2>
@@ -107,12 +107,14 @@
                 <form class="filters-form" method="get" action="https://echo.htmlacademy.ru">
                     <div class="fields-container general-sort">
                         <p class="sort-field-heading"><label for="sort">Сортировка:</label></p>
+                      <div class="sort-wrap">
                         <select class="inner-container sort" id="sort" name="sort">
                             <option value="popular">по популярности</option>
                             <option value="cheap-first">сначала недорогие</option>
                             <option value="expensive-first">сначала дорогие</option>
                             <option value="by-weight">по жирности</option>
                         </select>
+                      </div>
                     </div>
                     <div class="fields-container price-range-sort">
                         <p class="sort-field-heading">Цена: 100 руб. - 500 руб.</p>
@@ -337,6 +339,6 @@
 
         <!-- hover-indicator для js -->
         <div class="hover-indicator"></div>
-        <script src="js/script.js"></script>
+        <script src="js/script-mini.js"></script>
     </body>
 </html>

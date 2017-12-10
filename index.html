@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Глейси</title>
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/normalize-min.css">
+        <link rel="stylesheet" href="css/style-mini.css">
     </head>
     <body class="main-page">
         <header class="main-header">
@@ -32,7 +32,7 @@
 
                 <div class="user-interface">
                     <div class="link-icon-container search">
-                        <a class="link-icon search" href="#"><span class="visually-hidden">Поиск</span></a>
+                        <a class="link-icon search" href="search.html"><span class="visually-hidden">Поиск</span></a>
                     </div>
                     <section class="modal modal-search hidden">
                         <h2 class="visually-hidden">Форма поиска по сайту</h2>
@@ -43,7 +43,7 @@
                     </section>
 
                     <div class="link-icon-container login">
-                        <a class="link-icon log-in" href="#">Вход</a>
+                        <a class="link-icon log-in" href="log-in.html">Вход</a>
                     </div>
                     <section class="modal modal-log-in hidden">
                         <h2 class="visually-hidden">Форма входа на сайт</h2>
@@ -63,7 +63,7 @@
                     </section>
 
                     <div class="link-icon-container cart">
-                        <a class="link-icon shopping-cart" href="#">Пусто</a>
+                        <a class="link-icon shopping-cart" href="cart.html">Пусто</a>
                     </div>
                     <section class="modal modal-order hidden">
                         <h2 class="visually-hidden">Содержимое корзины с товарами</h2>
@@ -220,14 +220,7 @@
             <div class="map-and-contacts">
                 <h2 class="visually-hidden">Контакты</h2>
             <div class="map-widget">
-              <!--<a class="dg-widget-link" href="http://2gis.ru/spb/firm/70000001007485934/center/30.32312393188477,59.93972959090073/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">-->
-                <!--Посмотреть на карте Санкт-Петербурга</a>-->
-              <!--<div class="dg-widget-link">-->
-                <!--<a href="http://2gis.ru/spb/center/30.323134,59.93873/zoom/16/routeTab/rsType/bus/to/30.323134,59.93873╎HTML Academy?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">-->
-                  <!--Найти проезд до HTML Academy</a></div>-->
-              <!--<script src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>-->
-              <!--<script>new DGWidgetLoader({"width":"100%","height":430,"borderColor":"#a3a3a3","pos":{"lat":59.93972959090073,"lon":30.32312393188477,"zoom":16},"opt":{"city":"spb"},"org":[{"id":"70000001007485934"}]});</script>-->
-              <!--<noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>-->
+              <iframe src="https://yandex.ru/map-widget/v1/-/CBa8EYh~GA" width="1200" height="430"></iframe>
             </div>
 
               <div class="map-container">
@@ -240,7 +233,7 @@
                               <span class="phone">8 812 450-25-25</span>
                               <span class="working-hours">(с 10 до 20 ежедневно)</span></p>
 
-                        <a class="button show-feedback-form" href="#">Форма обратной связи</a>
+                        <a class="button show-feedback-form" href="feedback.html">Форма обратной связи</a>
                     </div>
                 </div>
                 <div class="feedback-form-overlay hidden">
@@ -287,6 +280,6 @@
 
         <!-- hover-indicator для js -->
         <div class="hover-indicator"></div>
-        <script src="js/script.js"></script>
+        <script src="js/script-mini.js"></script>
     </body>
 </html>
