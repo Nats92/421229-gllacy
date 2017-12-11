@@ -255,7 +255,7 @@ img {
 
   content: "";
 
-  bottom: 0;
+  bottom: -1px;
   right: 15px;
   left: 15px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -1018,9 +1018,9 @@ a.product-name-link {
   line-height: 22px;
   font-weight: 500;
   font-style: normal;
+  color: #fff;
 
-  text-decoration: underline;
-  text-decoration-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 .product-name-link:hover,
 .product-name-link:focus,
@@ -1817,7 +1817,8 @@ display: none;
   border: 8px solid #fff;
   border-radius: 50%;
 
-  color: #000;ursor: pointer;
+  color: #000;
+  cursor: pointer;
 }
 .price-range-pin {
   left: 13px;
